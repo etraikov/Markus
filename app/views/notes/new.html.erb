@@ -34,6 +34,6 @@
 </fieldset>
 
   <%= f.submit I18n.t('save') %>
-  <%= link_to I18n.t('cancel'), notes_path(), :class => "button" %>
+  <%= button_to_function I18n.t(:cancel), "self.location.href='" + url_for({:controller => 'notes'}) + "'", :class => 'button' %>
 <% end %>
 </div>

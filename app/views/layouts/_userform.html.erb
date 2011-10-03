@@ -17,7 +17,7 @@
     <%= f.submit t(:submit),
      :name => 'submit',
      :class => 'button indent_button' %>
-    <%= link_to t(:cancel), :class => "button" %>
+    <%= button_to_function I18n.t(:cancel), "self.location.href='" + url_for({:controller => controller}) + "'", :class => 'button' %>
   <% end %>
 
 </div>

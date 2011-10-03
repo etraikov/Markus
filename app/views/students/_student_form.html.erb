@@ -27,7 +27,7 @@
 
     <%= f.hidden_field :id %>
     <%= f.submit t(:submit), :name => 'submit', :class => 'button indent_button' %>
-    <%= link_to t(:cancel), {:controller => 'students'}, :class => "button" %>
+    <%= button_to_function I18n.t(:cancel), "self.location.href='" + url_for({:controller => 'students'}) + "'", :class => 'button' %>
 
     <% end %>
 
